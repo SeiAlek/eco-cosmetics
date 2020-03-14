@@ -1,7 +1,50 @@
 @import "utils";
-@import "fonts";
 @import "typography";
+@import "button";
+@import "content";
 
-body {
-  background: $c-gray;
+@import "page";
+@import "header";
+@import "nav";
+@import "card-header";
+@import "gift";
+@import "about";
+@import "shop";
+@import "card";
+@import "ingr";
+@import "feature";
+@import "contact-us";
+@import "form";
+@import "product";
+@import "checkout";
+@import "footer";
+
+.side-header {
+  @include sideHeader;
+
+  @media (max-width: $tabletMaxWidth) {
+    display: none;
+  }
+}
+
+.learn-more {
+  @include hover(color, $oliva);
+  @include text3;
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+  color: $green;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: 12px;
+    background-color: $green;
+  }
+
+  @media (max-width: $mobileMaxWidth) {
+    margin-top: 20px;
+  }
 }

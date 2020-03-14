@@ -1,0 +1,104 @@
+@import "utils";
+
+.footer {
+  font-size: 18px;
+  line-height: 150%;
+  color: $beige;
+  background-color: $oliva;
+
+  @media (max-width: $tabletMaxWidth) {
+    font-size: 14px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 50px 40px;
+    box-sizing: border-box;
+
+    @media (max-width: $mobileMaxWidth) {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+      padding: 30px 20px 60px;
+    }
+  }
+
+  &__nav {
+    order: 10;
+  }
+
+  &__contacts {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 20px;
+    order: 20;
+
+    @media (max-width: $tabletMaxWidth) {
+      grid-row: 1 / 4;
+      grid-column: 2;
+      row-gap: 12px;
+      align-items: start;
+      align-content: start;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      grid-row: 3;
+      grid-column: 1;
+    }
+  }
+
+  &__icons {
+    order: 40;
+    margin-top: 30px;
+
+    @media (max-width: $tabletMaxWidth) {
+      order: 15;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin: 20px 0 30px;
+    }
+  }
+
+  &__block-name {
+    display: inline;
+    text-transform: none;
+
+    @media (max-width: $tabletMaxWidth) {
+      display: none;
+    }
+  }
+
+  &__copyright {
+    align-self: end;
+    order: 30;
+    text-transform: uppercase;
+
+    @media (max-width: $mobileMaxWidth) {
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 30px;
+    }
+  }
+
+  &__link {
+    @include hover(color, $green);
+    color: $beige;
+    text-decoration: none;
+  }
+
+  &__icon-link {
+    display: inline-block;
+    margin: 0 14px 0 0;
+    text-decoration: none;
+  }
+
+  &__icon {
+    @include hover(transform, scale(1.2));
+    width: 20px;
+    height: 20px;
+  }
+}

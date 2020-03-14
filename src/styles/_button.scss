@@ -1,0 +1,22 @@
+@import "utils";
+
+.button {
+  @include hover(background-color, $beige);
+  @include hover(color, $gray1);
+  @include hover(border-color, $gray1);
+  display: block;
+  height: $buttonHeight;
+  width: $buttonWidth;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: $buttonHeight;
+  color: $gray6;
+  background-color: $gray1;
+  border: 1px solid $gray1;
+  cursor: pointer;
+
+  &--center {
+    margin: 0 auto;
+  }
+}

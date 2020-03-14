@@ -1,0 +1,141 @@
+@import "utils";
+
+.shop {
+  &__inner {
+    margin-left: 150px;
+
+    @media (max-width: $tabletMaxWidth) {
+      margin: 0 27px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin: 0;
+    }
+  }
+
+  &__header {
+    color: $green;
+
+    @media (max-width: $tabletMaxWidth) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      text-align: center;
+    }
+  }
+
+  &__nav {
+    margin: 20px 0 60px;
+
+    @media (max-width: $tabletMaxWidth) {
+      margin: 12px 0 20px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin: 12px 22px 20px;
+    }
+  }
+
+  &__nav-list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    column-gap: 60px;
+
+    @media (max-width: $mobileMaxWidth) {
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+  }
+
+  &__nav-link {
+    @include hover(color, $green);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    color: $gray3;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      margin-top: 20px;
+
+      @media (max-width: $tabletMaxWidth) {
+        margin-top: 10px;
+      }
+    }
+
+    &:hover {
+      &::after {
+        content: "";
+        background-color: $green;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    overflow: hidden;
+
+    @media (max-width: $tabletMaxWidth) {
+      column-gap: 30px;
+    }
+  }
+
+  &__item {
+    @media (max-width: $mobileMaxWidth) {
+      width: 100vw;
+    }
+  }
+
+  &__list-nav {
+    display: grid;
+    grid-template-columns: 28px 28px;
+    justify-content: start;
+    column-gap: 10px;
+    height: 28px;
+    margin: 45px 0 30px;
+
+    @media (max-width: $tabletMaxWidth) {
+      justify-content: end;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      justify-content: center;
+      margin: 0 0 30px;
+    }
+  }
+
+  &__list-prev {
+    background-image: url(../images/arrow-left.svg);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+    &:hover {
+      background-image: url(../images/arrow-left-dark.svg);
+    }
+  }
+  &__list-next {
+    background-image: url(../images/arrow-left.svg);
+    background-position: center;
+    background-size: cover;
+    transform: rotate(180deg);
+    cursor: pointer;
+
+    &:hover {
+      background-image: url(../images/arrow-left-dark.svg);
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

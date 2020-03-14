@@ -1,3 +1,70 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: $gray1;
+  background: $beige;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 h1 {
-  @extend %h1;
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 72px;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }

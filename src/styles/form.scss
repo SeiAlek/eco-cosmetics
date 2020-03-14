@@ -1,0 +1,48 @@
+@import "utils";
+
+.form {
+  padding-top: 20px;
+
+  &__field {
+    @include formField;
+  }
+
+  &__textarea {
+    @include formField;
+    resize: none;
+  }
+
+  &__button {
+    margin-top: 50px;
+
+    @media (max-width: $tabletMaxWidth) {
+      margin-top: 30px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin: 30px auto 0;
+    }
+  }
+
+  &__label-payment {
+    display: grid;
+    row-gap: 12px;
+    justify-content: center;
+    justify-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+    z-index: 100;
+    opacity: 0.5;
+  }
+
+  &__radio {
+    visibility: hidden;
+    grid-row: 1;
+
+    &:checked + .form__label {
+      opacity: 1;
+    }
+  }
+}
