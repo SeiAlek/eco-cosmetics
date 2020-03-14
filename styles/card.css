@@ -1,0 +1,50 @@
+.card__link-photo {
+  display: block;
+  overflow: hidden; }
+
+.card__photo {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center; }
+  .card__photo:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  @media (max-width: 1024px) {
+    .card__photo {
+      width: 342px;
+      height: 300px; } }
+  @media (max-width: 767px) {
+    .card__photo {
+      height: 267px;
+      width: 100%; } }
+
+.card__header {
+  margin: 20px 0 10px;
+  font-size: 20px; }
+  @media (max-width: 767px) {
+    .card__header {
+      margin: 20px 20px 10px; } }
+
+.card__link {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .card__link:hover {
+    color: #8c9772; }
+  .card__link:hover {
+    text-decoration: underline; }
+
+.card__price {
+  font-size: 18px; }
+  @media (max-width: 767px) {
+    .card__price {
+      margin: 0 20px; } }
+
+/*# sourceMappingURL=card.css.map */

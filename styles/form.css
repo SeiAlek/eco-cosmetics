@@ -1,0 +1,71 @@
+.form {
+  padding-top: 20px; }
+  .form__field {
+    font-size: 18px;
+    line-height: 130%;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    font-family: "Raleway", sans-serif;
+    text-transform: capitalize;
+    color: #828282;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #bdbdbd;
+    outline: transparent; }
+    @media (max-width: 1024px) {
+      .form__field {
+        margin-bottom: 20px;
+        padding: 5px 0;
+        font-size: 14px; } }
+    .form__field:focus {
+      border-color: #333; }
+  .form__textarea {
+    font-size: 18px;
+    line-height: 130%;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    font-family: "Raleway", sans-serif;
+    text-transform: capitalize;
+    color: #828282;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #bdbdbd;
+    outline: transparent;
+    resize: none; }
+    @media (max-width: 1024px) {
+      .form__textarea {
+        margin-bottom: 20px;
+        padding: 5px 0;
+        font-size: 14px; } }
+    .form__textarea:focus {
+      border-color: #333; }
+  .form__button {
+    margin-top: 50px; }
+    @media (max-width: 1024px) {
+      .form__button {
+        margin-top: 30px; } }
+    @media (max-width: 767px) {
+      .form__button {
+        margin: 30px auto 0; } }
+  .form__label-payment {
+    display: grid;
+    row-gap: 12px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+    z-index: 100;
+    opacity: 0.5; }
+  .form__radio {
+    visibility: hidden;
+    grid-row: 1; }
+    .form__radio:checked + .form__label {
+      opacity: 1; }
+
+/*# sourceMappingURL=form.css.map */

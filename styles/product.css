@@ -1,0 +1,84 @@
+.product {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: repeat(3, -webkit-max-content) 1fr 60px;
+  grid-template-rows: repeat(3, max-content) 1fr 60px;
+  grid-auto-flow: row;
+  grid-gap: 0 100px;
+  padding: 12px 40px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  @media (max-width: 1024px) {
+    .product {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, -webkit-max-content);
+      grid-template-rows: repeat(6, max-content);
+      max-width: 466px;
+      padding: 10px 20px 0; } }
+  .product__name {
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 20px; }
+    @media (max-width: 767px) {
+      .product__name {
+        grid-row: 1;
+        margin-bottom: 5px;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase; } }
+  .product__photo {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 100%; }
+    @media (max-width: 1024px) {
+      .product__photo {
+        grid-row: 1;
+        margin-bottom: 30px; } }
+    @media (max-width: 767px) {
+      .product__photo {
+        grid-row: 3; } }
+  .product__price {
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    @media (max-width: 767px) {
+      .product__price {
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase; } }
+  .product__weight {
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .product__weight {
+        display: none; } }
+  .product__text p {
+    width: 380px;
+    margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .product__text p {
+        width: 100%;
+        margin-bottom: 20px; } }
+  .product__button {
+    -ms-flex-item-align: end;
+        align-self: end;
+    margin: 0 auto; }
+    @media (max-width: 1024px) {
+      .product__button {
+        grid-row: 5;
+        margin-bottom: 80px; } }
+    @media (max-width: 767px) {
+      .product__button {
+        grid-row: 4;
+        width: 100%;
+        margin-bottom: 50px; } }
+
+/*# sourceMappingURL=product.css.map */

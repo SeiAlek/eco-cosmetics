@@ -1,0 +1,42 @@
+.contact-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 100px;
+     -moz-column-gap: 100px;
+          column-gap: 100px;
+  padding-left: 150px; }
+  @media (max-width: 1024px) {
+    .contact-us {
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px;
+      padding-left: 27px; } }
+  @media (max-width: 767px) {
+    .contact-us {
+      grid-template-columns: 1fr;
+      padding: 0 20px; } }
+  .contact-us::after {
+    content: "";
+    background-image: url(../images/illustrations/bird.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    @media (max-width: 767px) {
+      .contact-us::after {
+        display: none; } }
+  .contact-us__header {
+    margin: 20px 0;
+    color: #344f10;
+    text-transform: capitalize; }
+    @media (max-width: 1024px) {
+      .contact-us__header {
+        font-size: 24px; } }
+  .contact-us__description {
+    max-width: 380px;
+    font-size: 24px;
+    line-height: 150%; }
+    @media (max-width: 1024px) {
+      .contact-us__description {
+        font-size: 16px; } }
+
+/*# sourceMappingURL=contact-us.css.map */

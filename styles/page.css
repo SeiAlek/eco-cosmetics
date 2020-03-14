@@ -1,0 +1,57 @@
+.page {
+  min-width: 320px; }
+  .page__container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto 200px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    @media (max-width: 1024px) {
+      .page__container {
+        margin-bottom: 100px; } }
+    @media (max-width: 767px) {
+      .page__container {
+        margin-bottom: 60px; } }
+  .page__back-link {
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    position: absolute;
+    display: block;
+    left: 50px;
+    bottom: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333; }
+    .page__back-link:hover {
+      color: #8c9772; }
+    @media (max-width: 1024px) {
+      .page__back-link {
+        position: relative;
+        display: grid;
+        grid-template-columns: -webkit-max-content;
+        grid-template-columns: max-content;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        left: 0; } }
+    @media (max-width: 767px) {
+      .page__back-link {
+        margin-top: 160px; } }
+    .page__back-link::before {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 80px;
+      margin: 0 20px 5px 0;
+      background-color: #333; }
+      @media (max-width: 1024px) {
+        .page__back-link::before {
+          position: relative;
+          top: 30px;
+          width: 100%; } }
+
+/*# sourceMappingURL=page.css.map */

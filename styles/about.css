@@ -1,0 +1,51 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 100px;
+     -moz-column-gap: 100px;
+          column-gap: 100px; }
+  @media (max-width: 767px) {
+    .about {
+      grid-template-columns: 1fr; } }
+  .about__content {
+    margin-left: 150px; }
+    @media (max-width: 1024px) {
+      .about__content {
+        margin-left: 27px; } }
+    @media (max-width: 767px) {
+      .about__content {
+        margin: 0 20px; } }
+  .about__images {
+    display: grid;
+    grid-auto-flow: column;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    overflow: hidden; }
+    @media (max-width: 1024px) {
+      .about__images {
+        grid-template-columns: 1fr; } }
+    @media (max-width: 767px) {
+      .about__images {
+        display: none; } }
+  .about__image-link {
+    justify-self: stretch;
+    display: block; }
+  .about__image {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    width: 100%; }
+    .about__image:hover {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2); }
+
+/*# sourceMappingURL=about.css.map */
