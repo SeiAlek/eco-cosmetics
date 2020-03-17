@@ -1,0 +1,99 @@
+@import "utils";
+
+.ingr {
+  &__inner {
+    display: grid;
+    column-gap: 80px;
+    grid-auto-columns: 300px 1fr;
+    margin: 0 50px 0 150px;
+    overflow: hidden;
+
+    @media (max-width: $tabletMaxWidth) {
+      grid-template-columns: 150px 1fr;
+      margin: 0 0 0 27px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      display: block;
+      margin: 0 0 0 20px;
+    }
+  }
+
+  &__header {
+    margin: 80px 0 20px;
+    color: $green;
+
+    @media (max-width: $tabletMaxWidth) {
+      margin: 20px 0;
+      font-size: 24px;
+    }
+  }
+
+  &__content {
+    grid-row: 1 / 3;
+    grid-column: 2;
+    height: 400px;
+    background-image: url(../images/jar.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 80px 400px 0 0;
+
+    @media (max-width: $tabletMaxWidth) {
+      padding: 30px 240px 0 0;
+      background-position: top 0 right -100px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      padding-right: 30%;
+      background-position: top 0 right -230px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 50px;
+    justify-content: end;
+    justify-items: end;
+    text-transform: capitalize;
+
+    @media (max-width: $tabletMaxWidth) {
+      row-gap: 45px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 80px;
+      height: 5px;
+      margin-left: 20px;
+      background-image: url(../images/point-line.svg);
+      background-repeat: no-repeat;
+
+      @media (max-width: $tabletMaxWidth) {
+        height: 1px;
+        background-image: url(../images/line.svg);
+      }
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+
+    @media (max-width: $tabletMaxWidth) {
+      width: 120px;
+    }
+  }
+
+  &__learn-more {
+    align-self: end;
+  }
+}

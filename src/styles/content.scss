@@ -1,0 +1,30 @@
+@import "utils";
+
+.content {
+  &__header {
+    margin-bottom: 20px;
+    color: $green;
+
+    @media (max-width: $tabletMaxWidth) {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    p {
+      margin-bottom: 30px;
+
+      @media (max-width: $mobileMaxWidth) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 50px;
+
+    @media (max-width: $mobileMaxWidth) {
+      margin: 50px auto 0;
+    }
+  }
+}

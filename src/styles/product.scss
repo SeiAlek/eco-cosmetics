@@ -1,0 +1,98 @@
+@import "utils";
+
+.product {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: repeat(3, max-content) 1fr $buttonHeight;
+  grid-auto-flow: row;
+  grid-gap: 0 100px;
+  padding: 12px 40px 0;
+  box-sizing: border-box;
+
+  @media (max-width: $tabletMaxWidth) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, max-content);
+    max-width: 466px;
+    padding: 10px 20px 0;
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 20px;
+
+    @media (max-width: $mobileMaxWidth) {
+      grid-row: 1;
+      margin-bottom: 5px;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__photo {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 100%;
+
+    @media (max-width: $tabletMaxWidth) {
+      grid-row: 1;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      grid-row: 3;
+    }
+  }
+
+  &__price {
+    @include priceText;
+    margin-bottom: 20px;
+
+    @media (max-width: $mobileMaxWidth) {
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__weight {
+    @include priceText;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobileMaxWidth) {
+      display: none;
+    }
+  }
+
+  &__text {
+    p {
+      width: 380px;
+      margin-bottom: 30px;
+
+      @media (max-width: $mobileMaxWidth) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__button {
+    align-self: end;
+    margin: 0 auto;
+
+    @media (max-width: $tabletMaxWidth) {
+      grid-row: 5;
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      grid-row: 4;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+}

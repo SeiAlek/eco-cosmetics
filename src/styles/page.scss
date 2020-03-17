@@ -1,0 +1,62 @@
+@import "utils";
+
+.page {
+  min-width: $minWidth;
+
+  &__container {
+    position: relative;
+    max-width: $maxWidth;
+    margin: 0 auto 200px;
+    box-sizing: border-box;
+
+    @media (max-width: $tabletMaxWidth) {
+      margin-bottom: 100px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__back-link {
+    @include hover(color, $oliva);
+    position: absolute;
+    display: block;
+    left: 50px;
+    bottom: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $gray1;
+
+    @media (max-width: $tabletMaxWidth) {
+      position: relative;
+      display: grid;
+      grid-template-columns: max-content;
+      justify-content: center;
+      left: 0;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin-top: 160px;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 80px;
+      margin: 0 20px 5px 0;
+      background-color: $gray1;
+
+      @media (max-width: $tabletMaxWidth) {
+        position: relative;
+        top: 30px;
+        width: 100%;
+      }
+    }
+  }
+}

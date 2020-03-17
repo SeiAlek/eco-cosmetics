@@ -4,3 +4,141 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin menuLinkHover($_color) {
+  position: relative;
+  outline: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $_color;
+  }
+
+  &::after {
+    content: "";
+    opacity: 0;
+    transform: scale(0.1);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 3px;
+      display: block;
+      height: 2px;
+      margin-top: 8px;
+      background-color: $_color;
+      border-radius: 4px;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+}
+
+@mixin text2 {
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin text3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin priceText {
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin inputsAndMenuText {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+@mixin buttonText {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin decorText {
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin visibilityHidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin sideHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 220px;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $oliva;
+  transform: rotate(-90deg) translate(-50%, -100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 8px;
+    left: -110px;
+    height: 1px;
+    width: 100px;
+    margin-right: 10px;
+    background-color: $oliva;
+  }
+}
+
+@mixin formField {
+  @include inputsAndMenuText;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  color: $gray3;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid $gray4;
+  outline: transparent;
+
+  @media (max-width: $tabletMaxWidth) {
+    margin-bottom: 20px;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+
+  &:focus {
+    border-color: $gray1;
+  }
+}

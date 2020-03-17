@@ -1,0 +1,43 @@
+@import "utils";
+
+.gift {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 120px;
+
+  @media (max-width: $tabletMaxWidth) {
+    grid-template-columns: 1fr;
+  }
+
+  &__header {
+    order: 20;
+    padding: 100px 250px 100px 0;
+    color: $green;
+    border-bottom: 1px solid $oliva;
+
+    @media (max-width: $tabletMaxWidth) {
+      justify-self: center;
+      width: 280px;
+      padding: 0;
+      font-size: 18px;
+      text-align: center;
+      border: 0;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      width: auto;
+      padding: 0 20px;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    order: 10;
+    padding: 100px 0 0 150px;
+    border-top: 1px solid $oliva;
+
+    @media (max-width: $tabletMaxWidth) {
+      display: none;
+    }
+  }
+}

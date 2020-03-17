@@ -1,0 +1,51 @@
+@import "utils";
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+
+  @media (max-width: $mobileMaxWidth) {
+    grid-template-columns: 1fr;
+  }
+
+  &__content {
+    margin-left: 150px;
+
+    @media (max-width: $tabletMaxWidth) {
+      margin-left: 27px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin: 0 20px;
+    }
+  }
+
+  &__images {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 20px;
+    align-items: end;
+    overflow: hidden;
+
+    @media (max-width: $tabletMaxWidth) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      display: none;
+    }
+  }
+
+  &__image-link {
+    justify-self: stretch;
+    display: block;
+  }
+
+  &__image {
+    @include hover(transform, scale(1.1));
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}

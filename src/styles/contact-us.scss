@@ -1,0 +1,50 @@
+@import "utils";
+
+.contact-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+  padding-left: 150px;
+
+  @media (max-width: $tabletMaxWidth) {
+    column-gap: 30px;
+    padding-left: 27px;
+  }
+
+  @media (max-width: $mobileMaxWidth) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  &::after {
+    content: "";
+    background-image: url(../images/illustrations/bird.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $mobileMaxWidth) {
+      display: none;
+    }
+  }
+
+  &__header {
+    margin: 20px 0;
+    color: $green;
+    text-transform: capitalize;
+
+    @media (max-width: $tabletMaxWidth) {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    max-width: 380px;
+    font-size: 24px;
+    line-height: 150%;
+
+    @media (max-width: $tabletMaxWidth) {
+      font-size: 16px;
+    }
+  }
+}
