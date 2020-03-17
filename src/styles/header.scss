@@ -46,6 +46,10 @@
     color: $green;
     text-decoration: none;
 
+    &:hover .header__logo {
+      transform: scale(1.2);
+    }
+
     @media (max-width: $tabletMaxWidth) {
       grid-template-columns: 24px;
     }

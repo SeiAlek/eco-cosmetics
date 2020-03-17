@@ -54,7 +54,7 @@
   }
 
   &__link {
-    @include hover(color, $oliva);
+    @include menuLinkHover($oliva);
     @include inputsAndMenuText;
     color: $green;
     text-decoration: none;
@@ -65,7 +65,7 @@
 
     &:hover {
       color: $oliva;
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 

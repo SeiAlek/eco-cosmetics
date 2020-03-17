@@ -43,7 +43,7 @@
   }
 
   &__image {
-    @include hover(transform, scale(1.2));
+    @include hover(transform, scale(1.1));
     object-fit: cover;
     object-position: center;
     width: 100%;

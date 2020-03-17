@@ -5,6 +5,42 @@
   }
 }
 
+@mixin menuLinkHover($_color) {
+  position: relative;
+  outline: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $_color;
+  }
+
+  &::after {
+    content: "";
+    opacity: 0;
+    transform: scale(0.1);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 3px;
+      display: block;
+      height: 2px;
+      margin-top: 8px;
+      background-color: $_color;
+      border-radius: 4px;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+}
+
 @mixin text2 {
   font-size: 14px;
   line-height: 130%;
