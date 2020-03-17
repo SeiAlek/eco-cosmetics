@@ -110,7 +110,7 @@
   }
 
   &__link--footer {
-    @include hover(color, $green);
+    @include menuLinkHover($oliva);
     color: $beige;
 
     @media (max-width: $tabletMaxWidth) {

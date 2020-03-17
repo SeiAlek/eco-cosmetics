@@ -4,22 +4,24 @@
   &__link-photo {
     display: block;
     overflow: hidden;
+    height: $cardPhotoHeight;
+
+    @media (max-width: $tabletMaxWidth) {
+      width: $cardPhotoHeightTablet;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      height: $cardPhotoHeightMobile;
+      width: 100%;
+    }
   }
 
   &__photo {
     @include hover(transform, scale(1.2));
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     object-position: center;
-
-    @media (max-width: $tabletMaxWidth) {
-      width: 342px;
-      height: 300px;
-    }
-
-    @media (max-width: $mobileMaxWidth) {
-      height: 267px;
-      width: 100%;
-    }
   }
 
   &__header {
