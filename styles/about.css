@@ -45,7 +45,7 @@
        object-position: center;
     width: 100%; }
     .about__image:hover {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2); }
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
 
 /*# sourceMappingURL=about.css.map */

@@ -1,12 +1,22 @@
 .card__link-photo {
   display: block;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 480px; }
+  @media (max-width: 1024px) {
+    .card__link-photo {
+      width: 340px; } }
+  @media (max-width: 767px) {
+    .card__link-photo {
+      height: 280px;
+      width: 100%; } }
 
 .card__photo {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -14,14 +24,6 @@
   .card__photo:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2); }
-  @media (max-width: 1024px) {
-    .card__photo {
-      width: 342px;
-      height: 300px; } }
-  @media (max-width: 767px) {
-    .card__photo {
-      height: 267px;
-      width: 100%; } }
 
 .card__header {
   margin: 20px 0 10px;

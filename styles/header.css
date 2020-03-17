@@ -54,6 +54,9 @@
             order: 10;
     color: #344f10;
     text-decoration: none; }
+    .header__logo-link:hover .header__logo {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2); }
     @media (max-width: 1024px) {
       .header__logo-link {
         grid-template-columns: 24px; } }

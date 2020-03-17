@@ -54,6 +54,8 @@
   list-style: none; }
 
 .nav__link {
+  position: relative;
+  outline: none;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 18px;
@@ -62,11 +64,34 @@
   text-decoration: none; }
   .nav__link:hover {
     color: #8c9772; }
+  .nav__link::after {
+    content: "";
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s; }
+  .nav__link:hover::after, .nav__link:focus::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 3px;
+    display: block;
+    height: 2px;
+    margin-top: 8px;
+    background-color: #8c9772;
+    border-radius: 4px;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
   .nav__link:visited {
     color: #344f10; }
   .nav__link:hover {
     color: #8c9772;
-    text-decoration: underline; }
+    text-decoration: none; }
 
 .nav--show {
   display: block;
@@ -102,11 +127,36 @@
       row-gap: 20px; } }
 
 .nav__link--footer {
+  position: relative;
+  outline: none;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   color: #e4dfd3; }
   .nav__link--footer:hover {
-    color: #344f10; }
+    color: #8c9772; }
+  .nav__link--footer::after {
+    content: "";
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s; }
+  .nav__link--footer:hover::after, .nav__link--footer:focus::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 3px;
+    display: block;
+    height: 2px;
+    margin-top: 8px;
+    background-color: #8c9772;
+    border-radius: 4px;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
   @media (max-width: 1024px) {
     .nav__link--footer {
       font-size: 14px; } }
