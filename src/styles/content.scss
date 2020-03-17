@@ -9,15 +9,8 @@
       font-size: 24px;
     }
   }
-  
-  &__text {
-    @media (max-width: $tabletMaxWidth) {
-      &--block {
-        height: 216px;
-        overflow: hidden;
-      }
-    }
 
+  &__text {
     p {
       margin-bottom: 30px;
 
